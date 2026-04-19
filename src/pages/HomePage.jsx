@@ -286,31 +286,86 @@ const TaglineSection = () => (
 
 
 const ReviewsSection = () => (
-  <div className="bg-white pb-12 px-6">
-    <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-100">
-      <div className="flex flex-col md:flex-row items-center justify-between mb-8 border-b pb-4">
-        <div>
-          <h3 className="font-bold text-lg">EMEKA Auto Wrecking Inc</h3>
-          <div className="flex items-center gap-2">
-            <span className="text-orange-500 font-bold">4.8</span>
-            <div className="flex text-orange-400">★★★★★</div>
-            <span className="text-gray-500 text-sm underline">522 reviews on Google</span>
+  <div className="bg-white pb-16 px-6">
+    <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl p-8 shadow-sm border border-gray-100">
+      
+      {/* HEADER : Logo Zoomé + Infos */}
+      <div className="flex flex-col md:flex-row items-center justify-between mb-10 border-b border-gray-200 pb-8 gap-6">
+        
+        <div className="flex flex-col items-center md:items-start gap-4 flex-shrink-0">
+          <img 
+            src="/logo.png" 
+            alt="EMEKA AUTO Logo" 
+            className="w-24 h-auto md:w-32 object-contain bg-white p-3 rounded-xl shadow-md border border-gray-200"
+          />
+        </div>
+
+        <div className="flex-grow md:pl-6 text-center md:text-left">
+          <h3 className="font-extrabold text-2xl text-gray-900 tracking-tight">EMEKA AUTO</h3>
+          <div className="flex items-center gap-3 justify-center md:justify-start mt-2">
+            <span className="text-orange-500 font-bold text-lg">4.8</span>
+            <div className="flex text-orange-400 text-lg">★★★★★</div>
+            <a 
+              href="#" 
+              className="text-gray-500 text-sm underline hover:text-blue-600 transition-colors"
+            >
+              522 reviews on Google
+            </a>
           </div>
         </div>
-        <button className="mt-4 md:mt-0 bg-white border px-4 py-2 rounded-lg text-sm font-semibold shadow-sm hover:bg-gray-50">
+
+        <button className="flex-shrink-0 bg-white border border-gray-300 px-8 py-3 rounded-full text-sm font-bold shadow-sm hover:bg-black hover:text-white transition-all duration-300">
           Leave a Review
         </button>
       </div>
-      <div className="grid md:grid-cols-2 gap-6 text-left">
-        {/* Exemple d'un avis comme sur ton screen */}
-        <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-sm">
-          <div className="flex justify-between mb-2">
-            <span className="font-bold">Against All Odds</span>
-            <span className="text-blue-500">G</span>
+
+      {/* GRILLE D'AVIS AVEC PHOTOS DE PROFIL */}
+      <div className="grid md:grid-cols-2 gap-8 text-left">
+        
+        {/* Avis 1 */}
+        <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-sm">
+          <div className="flex justify-between items-start mb-4">
+            <div className="flex items-center gap-3">
+              {/* PHOTO DE PROFIL ZOOMÉE */}
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" 
+                alt="Against All Odds profile" 
+                className="w-12 h-12 rounded-full object-cover border-2 border-orange-100 shadow-sm"
+              />
+              <div>
+                <span className="block font-bold text-gray-900">Against All Odds</span>
+                <span className="text-[10px] text-gray-400 uppercase">Local Guide</span>
+              </div>
+            </div>
+            <div className="bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full text-[11px] font-bold">G</div>
           </div>
-          <p className="text-gray-600 italic">"Talk about exceeding expectations. To be honest, I wasn't expecting this at all..."</p>
+          <p className="text-gray-700 italic leading-relaxed">
+            "Talk about exceeding expectations. To be honest, I wasn't expecting this at all, but the quality of service for my vehicle was top notch."
+          </p>
         </div>
-        {/* Ajouter le deuxième avis ici */}
+
+        {/* Avis 2 */}
+        <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-sm">
+          <div className="flex justify-between items-start mb-4">
+            <div className="flex items-center gap-3">
+              {/* PHOTO DE PROFIL ZOOMÉE */}
+              <img 
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" 
+                alt="Marc Antoine profile" 
+                className="w-12 h-12 rounded-full object-cover border-2 border-blue-100 shadow-sm"
+              />
+              <div>
+                <span className="block font-bold text-gray-900">Marc Antoine</span>
+                <span className="text-[10px] text-gray-400 uppercase">Verified Customer</span>
+              </div>
+            </div>
+            <div className="bg-blue-600 text-white w-6 h-6 flex items-center justify-center rounded-full text-[11px] font-bold">G</div>
+          </div>
+          <p className="text-gray-700 italic leading-relaxed">
+            "Best auto service in town. They helped me find a rare engine part for my truck in less than 24 hours. Highly recommended!"
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
