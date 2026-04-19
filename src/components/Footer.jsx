@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="font-bold text-sm tracking-widest uppercase mb-6">Become a fan!</h3>
             <p className="text-gray-700 text-sm mb-6 max-w-sm leading-relaxed">
-              Subscribe to get special coupons and alerts to fun and new things going on at J & J Auto Wrecking!
+              Subscribe to get special coupons and alerts to fun and new things going on at EMEKA Auto Wrecking!
             </p>
             
             <div className="relative max-w-md group">
@@ -66,7 +66,7 @@ const Footer = () => {
             ))}
           </div>
           <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em]">
-            © 2026 J & J Auto Wrecking
+            © 2026 EMEKA Auto Wrecking
           </p>
         </div>
       </div>

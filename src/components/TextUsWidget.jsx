@@ -57,7 +57,7 @@ const TextUsWidget = () => {
 
             {/* Texte Légal */}
             <p className="text-[11px] text-gray-500 leading-[1.4] px-2">
-              By submitting, you authorize J & J Auto Wrecking Inc - 8558 Black Diamond Road, Marshallville to text/call the number above for informational messages, possibly using automated means and/or AI-generated calls/content. Msg/data rates apply, msg frequency varies. Consent is not a condition of purchase. <span className="underline cursor-pointer">See terms</span>. Text HELP for help and STOP to unsubscribe.
+              By submitting, you authorize EMEKA Auto Wrecking Inc - 8558 Black Diamond Road, Marshallville to text/call the number above for informational messages, possibly using automated means and/or AI-generated calls/content. Msg/data rates apply, msg frequency varies. Consent is not a condition of purchase. <span className="underline cursor-pointer">See terms</span>. Text HELP for help and STOP to unsubscribe.
             </p>
 
             {/* Bouton Send (Optionnel selon l'original, mais souvent présent en bas) */}

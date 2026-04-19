@@ -290,7 +290,7 @@ const ReviewsSection = () => (
     <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-100">
       <div className="flex flex-col md:flex-row items-center justify-between mb-8 border-b pb-4">
         <div>
-          <h3 className="font-bold text-lg">J & J Auto Wrecking Inc</h3>
+          <h3 className="font-bold text-lg">EMEKA Auto Wrecking Inc</h3>
           <div className="flex items-center gap-2">
             <span className="text-orange-500 font-bold">4.8</span>
             <div className="flex text-orange-400">★★★★★</div>
@@ -448,7 +448,7 @@ const TeamSection = () => (
           Is Passionate
         </h2>
         <p className="text-gray-600 text-base leading-relaxed mb-6 max-w-md">
-          Every employee at J & J cares about the customers parts as if it was for their own car.
+          Every employee at EMEKA cares about the customers parts as if it was for their own car.
           We always treat the customer the way we would like to be treated.
         </p>
         <p className="text-gray-800 font-semibold text-base leading-relaxed max-w-md">
