@@ -514,39 +514,68 @@ const WheelsBannerSection = () => (
 
 /** 6. Our Team is Passionate */
 const TeamSection = () => (
-  <section className="relative w-full h-[600px] md:h-[500px] flex items-center">
-    {/* L'IMAGE EN ARRIÈRE-PLAN : Pleine largeur et hauteur fixe */}
-    <div className="absolute inset-0 w-full h-full">
-      <img
-        src="/emeka.jfif"
-        alt="EMEKA AUTO Team"
-        className="w-full h-full object-cover object-center"
-      />
-      {/* Overlay léger pour faire ressortir le texte sur mobile */}
-      <div className="absolute inset-0 bg-black/10"></div>
-    </div>
+  <>
+    <section className="relative w-full h-[600px] md:h-[500px] flex items-center">
+      {/* L'IMAGE EN ARRIÈRE-PLAN : Pleine largeur et hauteur fixe */}
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="/emeka.jfif"
+          alt="EMEKA AUTO Team"
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Overlay léger pour faire ressortir le texte */}
+        <div className="absolute inset-0 bg-black/10"></div>
+      </div>
 
-    {/* LE TEXTE : Positionné par-dessus l'image */}
-    <div className="relative z-10 container mx-auto px-6">
-      <div className="bg-white p-8 md:p-12 shadow-2xl max-w-lg lg:ml-12">
-        <p className="text-gray-500 text-xs md:text-sm uppercase tracking-[0.3em] mb-4">
-          Our Team
-        </p>
-        <h2 className="text-3xl md:text-5xl font-black text-gray-900 uppercase italic leading-none mb-6">
-          Is Passionate
-        </h2>
-        <div className="space-y-4">
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-            Every employee at <span className="font-bold text-gray-900">EMEKA AUTO</span> cares about the customers parts as if it was for their own car.
+      {/* LE TEXTE : Positionné par-dessus l'image */}
+      <div className="relative z-10 container mx-auto px-6">
+        <div className="bg-white p-8 md:p-12 shadow-2xl max-w-lg lg:ml-12">
+          <p className="text-gray-500 text-xs md:text-sm uppercase tracking-[0.3em] mb-4">
+            Our Team
           </p>
-          <p className="text-gray-800 font-medium text-sm md:text-base leading-relaxed border-l-4 border-orange-600 pl-4">
-            We set the standard over a decade ago. You can watch your part being put
-            to the test in one of our thousands of test videos.
-          </p>
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 uppercase italic leading-none mb-6">
+            Is Passionate
+          </h2>
+          <div className="space-y-4">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+              Every employee at <span className="font-bold text-gray-900">EMEKA AUTO</span> cares about the customers parts as if it was for their own car.
+            </p>
+            <p className="text-gray-800 font-medium text-sm md:text-base leading-relaxed border-l-4 border-orange-600 pl-4">
+              We set the standard over a decade ago. You can watch your part being put
+              to the test in one of our thousands of test videos.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    {/* SECTION VIDÉO : Centrée juste après le texte */}
+    <section className="bg-white py-16 md:py-24">
+      <div className="max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
+        {/* Texte d'introduction vidéo */}
+        <h3 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-10 max-w-3xl leading-tight">
+          We set the standard over a decade ago. You can watch your part being put to the test in one of our thousands of test videos.
+        </h3>
+
+        {/* Lecteur Vidéo YouTube */}
+        <div className="w-full aspect-video shadow-2xl rounded-sm overflow-hidden border-8 border-white bg-gray-100">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/F8BV9UZx_nk?start=10"
+            title="EMEKA AUTO Test Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        
+        {/* Légende facultative (Stock # RJCE240 de la vidéo) */}
+        <p className="mt-6 text-gray-500 italic text-sm">
+          2018 Chevrolet Camaro SS Part Out: EMEKA AUTO Test Video
+        </p>
+      </div>
+    </section>
+  </>
 );
 
 
