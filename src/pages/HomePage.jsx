@@ -442,43 +442,71 @@ const FeaturedModelsSection = () => (
 
 /** 5. Wheels CTA Banner */
 const WheelsBannerSection = () => (
-  <section className="bg-black py-0 overflow-hidden">
-    <div className="flex flex-col lg:flex-row">
-      {/* Collage d'images */}
-      <div className="flex lg:w-1/2 h-72 lg:h-auto">
-        {wheelImages.map((w, i) => (
-          <div key={i} className="flex-1 overflow-hidden">
-            <img
-              src={w.img}
-              alt=""
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+  <section className="bg-white py-16 lg:py-24 overflow-hidden">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        
+        {/* Collage d'images déstructuré (Côté gauche) */}
+        <div className="relative w-full lg:w-1/2 h-[400px] md:h-[500px] flex items-center justify-center">
+          {/* Image principale au centre */}
+          <div className="relative z-20 shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+            <img 
+              src={wheelImages[0].img} 
+              alt="Main Wheel" 
+              className="w-64 md:w-80 h-auto rounded-sm border-[6px] border-white shadow-xl"
             />
           </div>
-        ))}
-      </div>
-      {/* Texte */}
-      <div className="lg:w-1/2 flex flex-col justify-center px-10 py-14 lg:py-0">
-        <p className="text-gray-400 text-sm uppercase tracking-widest mb-2">Upgrade your ride</p>
-        <h2 className="text-white text-4xl md:text-5xl font-extrabold uppercase italic leading-none mb-6">
-          With a New Set of Wheels
-        </h2>
-        <p className="text-gray-300 mb-8 text-base leading-relaxed max-w-sm">
-          Check out our unique collection of wheel and wheel & tire sets.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <a
-            href="#"
-            className="px-6 py-3 bg-white text-black text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"
-          >
-            Browse Wheel Sets
-          </a>
-          <a
-            href="#"
-            className="px-6 py-3 border border-white text-white text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
-          >
-            Browse All Parts
-          </a>
+          
+          {/* Image en haut à gauche */}
+          <img 
+            src={wheelImages[1].img} 
+            className="absolute top-0 left-4 md:left-10 w-32 md:w-44 opacity-40 grayscale z-10" 
+            alt="" 
+          />
+          
+          {/* Image en bas à gauche */}
+          <img 
+            src={wheelImages[2].img} 
+            className="absolute bottom-4 left-0 md:left-8 w-40 md:w-52 z-30 border-4 border-white shadow-lg" 
+            alt="" 
+          />
+          
+          {/* Image à droite (floue/transparente) */}
+          <img 
+            src={wheelImages[3].img} 
+            className="absolute top-1/2 -right-4 w-36 md:w-48 opacity-20 z-0" 
+            alt="" 
+          />
         </div>
+
+        {/* Texte et Boutons (Côté droit) */}
+        <div className="w-full lg:w-1/2">
+          <p className="text-gray-500 text-sm uppercase tracking-[0.3em] font-bold mb-4">
+            Upgrade your ride
+          </p>
+          <h2 className="text-gray-900 text-4xl md:text-6xl font-black uppercase italic leading-[0.9] mb-8">
+            With a New Set <br /> of Wheels
+          </h2>
+          <p className="text-gray-600 mb-10 text-lg leading-relaxed max-w-md">
+            Check out our unique collection of wheel and wheel & tire sets.
+          </p>
+          
+          <div className="flex flex-col gap-4 sm:w-80">
+            <a
+              href="#"
+              className="px-8 py-4 bg-black text-white text-sm font-bold uppercase tracking-widest text-center hover:bg-zinc-800 transition-all"
+            >
+              Browse Wheel Sets
+            </a>
+            <a
+              href="#"
+              className="px-8 py-4 bg-black text-white text-sm font-bold uppercase tracking-widest text-center hover:bg-zinc-800 transition-all"
+            >
+              Browse All Parts
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -486,34 +514,42 @@ const WheelsBannerSection = () => (
 
 /** 6. Our Team is Passionate */
 const TeamSection = () => (
-  <section className="bg-white overflow-hidden">
-    <div className="flex flex-col lg:flex-row">
-      {/* Image */}
-      <div className="lg:w-1/2 h-72 lg:h-auto">
-        <img
-          src="https://jandjautowrecking.com/cdn/shop/files/TMJlDgpQ_4x_b6bc9ce6-76ca-4751-bc59-1c992a6cd4f0.jpg?v=1657640475&width=2400"
-          alt="J&J Team"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      {/* Texte */}
-      <div className="lg:w-1/2 flex flex-col justify-center px-10 py-14 bg-white">
-        <p className="text-gray-500 text-sm uppercase tracking-widest mb-2">Our Team</p>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 uppercase italic leading-none mb-6">
+  <section className="relative w-full h-[600px] md:h-[500px] flex items-center">
+    {/* L'IMAGE EN ARRIÈRE-PLAN : Pleine largeur et hauteur fixe */}
+    <div className="absolute inset-0 w-full h-full">
+      <img
+        src="/emeka.jfif"
+        alt="EMEKA AUTO Team"
+        className="w-full h-full object-cover object-center"
+      />
+      {/* Overlay léger pour faire ressortir le texte sur mobile */}
+      <div className="absolute inset-0 bg-black/10"></div>
+    </div>
+
+    {/* LE TEXTE : Positionné par-dessus l'image */}
+    <div className="relative z-10 container mx-auto px-6">
+      <div className="bg-white p-8 md:p-12 shadow-2xl max-w-lg lg:ml-12">
+        <p className="text-gray-500 text-xs md:text-sm uppercase tracking-[0.3em] mb-4">
+          Our Team
+        </p>
+        <h2 className="text-3xl md:text-5xl font-black text-gray-900 uppercase italic leading-none mb-6">
           Is Passionate
         </h2>
-        <p className="text-gray-600 text-base leading-relaxed mb-6 max-w-md">
-          Every employee at EMEKA cares about the customers parts as if it was for their own car.
-          We always treat the customer the way we would like to be treated.
-        </p>
-        <p className="text-gray-800 font-semibold text-base leading-relaxed max-w-md">
-          We set the standard over a decade ago. You can watch your part being put
-          to the test in one of our thousands of test videos.
-        </p>
+        <div className="space-y-4">
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+            Every employee at <span className="font-bold text-gray-900">EMEKA AUTO</span> cares about the customers parts as if it was for their own car.
+          </p>
+          <p className="text-gray-800 font-medium text-sm md:text-base leading-relaxed border-l-4 border-orange-600 pl-4">
+            We set the standard over a decade ago. You can watch your part being put
+            to the test in one of our thousands of test videos.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 );
+
+
 
 /** 7. Blog Articles */
 const BlogSection = () => (
